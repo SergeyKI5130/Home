@@ -1,5 +1,123 @@
 //====================================================================================================
+.header {
+	padding: 30px 0px 0px 0px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	&__content {
+	}
 
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__column {
+		display: flex;
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+	}
+}
+
+.menu {
+	align-self: center;
+	&__icon {
+	}
+
+	&__body {
+		@media (max-width:$md3+px){
+			display: none;
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 width: 100%;
+			 height: 100%;
+			 padding: 50px 0px;
+			 overflow: auto;
+			 background-color: rgba(0, 0, 0, 0.95); 
+		}
+	}
+
+	&__list {
+		display: flex;
+		padding: 0px 0px 0px 20px;
+		@media (max-width:$md3+px){
+			 margin: 0px 0px;
+			 display: flex;
+			 flex-direction: column;
+			 justify-content:center;
+			 align-items: center; 
+		}
+		li {
+			margin: 0px 60px 0px 0px;
+			@media (max-width:$md2+px){
+				 margin: 0px 25px 0px 0px; 
+			}
+			@media (max-width:$md3+px){
+				 margin: 0px 0px 25px 0px; 
+			}
+		}
+	}
+
+	&__link {
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 20px;
+		line-height: 140%;
+		color: #fff;
+		@media (max-width:$md3+px){
+			 font-size: 20px; 
+		}
+	}
+}
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		display: block;
+		position: fixed;
+		top: 5px;
+		right: 5px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}         
 //====================================================================================================
 
 /*
