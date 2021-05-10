@@ -1,0 +1,4 @@
+node_modules/
+House/**/*.*
+package-lock.json
+info.txt
